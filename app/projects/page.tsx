@@ -1,4 +1,4 @@
-import { projects } from "@/data/project"
+import { projects } from "@/data/allData"
 import Link from "next/link"
 
 const Projects = () => {
@@ -7,7 +7,7 @@ const Projects = () => {
             <div>
             {projects.map((project) => {
                     return (
-                        <div>
+                        <div key={project.id}>
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
                             <Link href={project.github}>Github</Link>

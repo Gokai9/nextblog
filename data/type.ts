@@ -9,5 +9,6 @@ export interface Blog {
     id: number,
     title: string,
     desription: string,
-    category: string[]
+    category: string[],
+  
 }
