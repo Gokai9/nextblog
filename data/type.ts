@@ -10,5 +10,6 @@ export interface Blog {
     title: string,
     desription: string,
     category: string[],
+    slug: string
   
 }

@@ -19,6 +19,9 @@
 body {
   background-color: black;
   color: white;
+  width: 90%;
+  margin: auto;
+  
 }
 
 @layer utilities {
