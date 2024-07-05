@@ -16,6 +16,9 @@ const Footer = () => {
         <li>
             <Link href={"https://www.codewars.com/users/Gokai9"} className="hover:underline">Codewars</Link>
         </li>
+        <li>
+        <Link href={"https://codesandbox.io/dashboard/recent?workspace=622569c8-ac08-41a9-a633-f85e21044baf"} className="hover:underline me-4 md:me-6">Codesandbox</Link>
+        </li>
     </ul>
 </footer>
 
