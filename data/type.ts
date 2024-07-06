@@ -1,11 +1,11 @@
-export interface Project {
+export interface ProjectType {
     id: number,
     title: string,
     description: string,
     github: string
 }
 
-export interface Blog {
+export interface BlogType {
     id: number,
     title: string,
     desription: string,

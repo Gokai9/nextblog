@@ -1,17 +1,14 @@
-import { projects } from "@/data/allData"
-import Link from "next/link"
+import { projectsData } from "@/data/allData"
+import Project from "../Component/Project"
+import { ProjectType } from "@/data/type"
 
 const Projects = () => {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
             <div>
-            {projects.map((project) => {
+            {projectsData.map((project:ProjectType) => {
                     return (
-                        <div key={project.id}>
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                            <Link href={project.github}>Github</Link>
-                        </div>
+                        <Project key={project.id} project={project}/>
                     )
                 })}
             </div>

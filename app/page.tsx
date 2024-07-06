@@ -15,7 +15,7 @@ export default function Home() {
             I recently started to writing about programming stuf because it make me understand more what i doing,
             i hope that i can be better at writing and explain new thing.
           </p>
-          <Link href={"/blogs"} className="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read my blog</Link>
+          <Link href={"/blog"} className="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read my blog</Link>
         </div>
       </div>
     </main>

@@ -1,6 +1,6 @@
-import { Blog, Project } from "@/data/type";
+import { BlogType, ProjectType } from "@/data/type";
 
-export const blogs: Blog[] = [
+export const blogsData: BlogType[] = [
     {
         id: 1,
         title: "apa itu functional programming",
@@ -17,11 +17,11 @@ export const blogs: Blog[] = [
     }
 ]
 
-export const projects: Project[] = [
+export const projectsData: ProjectType[] = [
     {
         id: 1,
         title: "Blog with next js",
-        description: "this blog made with next js",
+        description: "This blog made with next js and mdx",
         github: "https://github.com/Gokai9/nextblog"
     },
     {
