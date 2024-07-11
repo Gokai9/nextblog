@@ -1,15 +1,17 @@
-import { blogsData } from "@/data/allData"
+import { getPosts } from "@/data/posts";
 import EachBlog from "../Component/EachBlog"
 
-const Blogs = () => {
-    return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <div className="pb-4">
-                {blogsData.map((blog) => <EachBlog key={blog.id} blog={blog}/>)}
-            </div>
-        </main>
-        
-    )
-}
+export default async function Page() {
+  const posts = await getPosts();
 
-export default Blogs
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+      {posts
+        .sort((a, b) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime())
+        .map((post) => (
+            <EachBlog key={post.slug} post={post}/>
+        ))}
+    </div>
+  );
+}
