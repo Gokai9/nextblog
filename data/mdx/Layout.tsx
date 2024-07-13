@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import {A} from "@/data/mdx/A";
+import Component from "./Code";
 
 //mdxremote will render children inside tag paragraph
 export function Layout({ children }: { children: string }) {
@@ -9,7 +10,7 @@ export function Layout({ children }: { children: string }) {
       options={{
         mdxOptions: {},
       }}
-      components={A}
+      components={{A, Component}}
     />
   );
 }
