@@ -14,9 +14,12 @@ export default async function Page({ params }: {
   if (!post) return notFound();
 
   return (
-    <article className="prose lg:prose-xl prose-slate max-width-screen-screen flex flex-col justify-center h-screen">
+    <main className="flex justify-center items-center">
+    <article className="prose lg:prose-xl prose-slate max-w-screen-lg flex flex-col h-screen">
       <h1>{post.title}</h1>
+      <div>{post.date}</div>
       <Layout>{post.body}</Layout>
     </article>
+    </main>
   );
 }
