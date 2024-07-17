@@ -1,3 +1,4 @@
+import Me from "../Component/Me"
 
 const About = () => {
     return (
@@ -8,6 +9,7 @@ const About = () => {
                     because you can make computer do what you want. Also i like 
                     to know how something work.
                 </p>
+                <Me />
             </div>
         </main>
         

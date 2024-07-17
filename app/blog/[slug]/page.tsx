@@ -1,7 +1,8 @@
 import { getPost, getPosts } from "@/data/posts";
 import { notFound } from "next/navigation";
 import {Layout} from '@/data/mdx/Layout'
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
+import Me from "@/app/Component/Me"
 
 export async function generateMetadata(
   { params}: {params:{slug:string}}
@@ -27,12 +28,13 @@ export default async function Page({ params }: {
   if (!post) return notFound();
 
   return (
-    <main className="flex justify-center items-center lg:h-screen">
-    <article className="prose lg:prose-xl text-slate-50 max-w-screen-lg my-4 flex flex-col">
+    <main className="flex flex-col justify-center items-center lg:h-fit my-4">
+    <article className="prose lg:prose-xl text-slate-50 max-w-screen-lg flex flex-col">
       <h1 className="text-slate-50">{post.title}</h1>
       <div>{post.date}</div>
       <Layout>{post.body}</Layout>
     </article>
+    <Me />
     </main>
   );
 }
