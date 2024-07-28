@@ -2,15 +2,13 @@ import Me from "../Component/Me"
 
 const About = () => {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <div>
-                <h2>Who me</h2>
-                <p>Hello, you can call me sim, programming is very interesting
-                    because you can make computer do what you want. Also i like 
-                    to know how something work.
+        <main className="flex min-h-screen flex-col items-center justify-center pt-4">
+                <h2 className="text-xl bold">Hey there!</h2>
+                <p>Hello, you can call me sim. Im a software engineer, polyglot, and writer.
+                    After learn english and japanese, i try to learn french and add it to my polyglot
+                    stack. Also i am something writing about my learning journey.
                 </p>
                 <Me />
-            </div>
         </main>
         
     )
