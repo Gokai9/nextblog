@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Me = () => {
     return (
-        <div className="bg-gray-600 m-8 p-8 rounded flex lg:flex-row flex-col">
+        <div className="bg-gray-600 m-8 p-8 rounded w-full flex lg:flex-row flex-col justify-around">
             <div className="w-2/4">
             <h1 className="text-xl">About ME</h1>
             <h3>I'm a Fullstack Developer and Writer</h3>
