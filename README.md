@@ -1,4 +1,4 @@
-# Frontend Mentor - Product list with cart solution
+# Personal website
 
 This is my blog where i post my writing there alongside to become my portfolio
 
