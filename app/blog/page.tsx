@@ -1,6 +1,12 @@
 import { getPosts } from "@/data/posts";
-import EachBlog from "../Component/EachBlog"
-import type { Viewport, Metadata } from 'next'
+import EachBlog from "../componets/EachBlog"
+import type { Metadata, Viewport } from 'next'
+
+export const metadata: Metadata = {
+  title: "Sim | Posts",
+  description: "Blog tentang dunia programming",
+};
+
 
 export const viewport: Viewport = {
   width: 'device-width',

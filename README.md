@@ -13,7 +13,6 @@ This is my blog where i post my writing there alongside to become my portfolio
   - [Continued development](#continued-development)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -22,10 +21,11 @@ This is my blog where i post my writing there alongside to become my portfolio
 - Make multiple page
 - Mobile responsive
 - Add markdown
+- Using markdown with tailwind
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Sim](https://simsim11.vercel.app/)
 
 ## My process
 
@@ -38,11 +38,14 @@ This is my blog where i post my writing there alongside to become my portfolio
 
 ### What I learned
 
-Add markdwon to next js and mobile responsive
+Add markdown to next js and mobile responsive 
 
 ### Continued development
 
 - Add SEO
+- Search post by title
+- Filter by tag
+- Implement comment
 
 ## Author
 

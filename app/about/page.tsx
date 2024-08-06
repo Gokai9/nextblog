@@ -1,4 +1,11 @@
-import Me from "../Component/Me"
+import { Metadata } from "next";
+import Me from "../componets/Me"
+
+export const metadata: Metadata = {
+    title: "Sim | About",
+    description: "Do you want to know about me",
+  };
+  
 
 const About = () => {
     return (

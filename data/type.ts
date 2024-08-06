@@ -4,12 +4,3 @@ export interface ProjectType {
     description: string,
     github: string
 }
-
-export interface BlogType {
-    id: number,
-    title: string,
-    desription: string,
-    category: string[],
-    slug: string
-  
-}

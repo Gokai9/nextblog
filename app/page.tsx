@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Me from "./Component/Me";
+import Me from "./componets/Me";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
             I recently started to writing about programming stuf because it make me understand more what i doing,
             i hope that i can be better at writing and explain new thing.
           </p>
-          <Link href="/blog" className="text-white font-medium text-sm px-5 py-2.5 border">Read my blog</Link>
+          <Link href="/blog" className="text-white font-medium text-sm px-5 py-2.5 border hover:bg-gray-700">Read my blog</Link>
         </div>
         <Me />
     </main>
