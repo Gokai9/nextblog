@@ -5,7 +5,6 @@ import { useState } from "react"
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-
     const hiddenNavList = (
         <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pb-3 pt-2">
@@ -17,7 +16,6 @@ const Header = () => {
     </div>
   </div>
     )
-    
     return (
 <nav className="bg-gray-800">
   <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

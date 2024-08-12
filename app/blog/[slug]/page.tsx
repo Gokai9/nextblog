@@ -23,10 +23,8 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: {
   params: { slug: string } }) {
-
   const post = await getPost(params.slug);
   if (!post) return notFound();
-
   return (
     <main className="flex flex-col justify-center items-center lg:h-fit my-4">
     <article className="prose lg:prose-xl text-slate-50 max-w-screen-lg flex flex-col">

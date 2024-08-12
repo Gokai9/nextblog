@@ -1,21 +1,11 @@
 import { getPosts } from "@/data/posts";
 import EachBlog from "../componets/EachBlog"
-import type { Metadata, Viewport } from 'next'
+import meta from "../componets/helper/metadata";
 
-export const metadata: Metadata = {
-  title: "Sim | Posts",
-  description: "Blog tentang dunia programming",
-};
-
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
+export const metadata = meta("Blogs", "Programming Blogs")
 
 export default async function Page() {
   const posts = await getPosts();
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-24">
       {posts

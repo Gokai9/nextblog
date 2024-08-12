@@ -1,15 +1,9 @@
-import { projectsData } from "@/data/allData"
+import { projectsData } from "@/data/projectsData"
 import Project from "../componets/Project"
 import { ProjectType } from "@/data/type"
-import { Metadata } from "next";
+import meta from "../componets/helper/metadata"
 
-export const metadata: Metadata = {
-    title: "Sim | Projects",
-    description: "See it",
-  };
-  
-
-const Projects = () => {
+export default function Projects() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center p-24">
             <div>
@@ -24,4 +18,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export const metadata = meta("Projects", "See it")

@@ -1,13 +1,9 @@
-import { Metadata } from "next";
 import Me from "../componets/Me"
+import meta from "../componets/helper/metadata";
 
-export const metadata: Metadata = {
-    title: "Sim | About",
-    description: "Do you want to know about me",
-  };
-  
+export const metadata = meta("About", "Do you want to know about me")
 
-const About = () => {
+export default function About() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center pt-4">
                 <h2 className="text-xl bold">Hey there!</h2>
@@ -20,5 +16,3 @@ const About = () => {
         
     )
 }
-
-export default About
