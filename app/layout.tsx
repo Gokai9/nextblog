@@ -21,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}><Header />{children}<Footer /></body>
+      <body className={`${inter.className} w-full lg:w-[1025px]`}>
+        <Nav />
+        <main className="mt-10 max-w-screen flex flex-wrap items-center justify-between mx-auto py-4 mx-4">
+        {children}
+        </main>
+        <Footer />
+        </body>
     </html>
   );
 }

@@ -19,7 +19,6 @@
 body {
   background-color: black;
   color: white;
-  width: 90%;
   margin: auto;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
@@ -31,6 +30,5 @@ body {
 }
 
 html {
-    font-size: 92.5%;
     font-family: 'Roboto', sans-serif;
 }

@@ -3,14 +3,14 @@ import Me from "./componets/Me";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center py-10">
-        <div className="w-screen lg:w-full px-4">
+    <main className="flex min-h-screen flex-col items-center justify-center">
+        <div className=" lg:w-full">
           <p className="mb-6 text-3xl font-semibold leading-normal text-white">
           Hello everyone, Welcome to my website i like to build a new stuf and learn new thing
           </p>
           <Link href="/about" className="text-white font-medium text-smpy-2.5">know more about me</Link>
         </div>
-        <div className="w-screen lg:w-full px-4">
+        <div className="lg:w-full">
           <p className="mb-6">
             I recently started to writing about programming stuf because it make me understand more what i doing,
             i hope that i can be better at writing and explain new thing.

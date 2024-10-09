@@ -13,8 +13,7 @@ interface BlogProps {
 
 const EachBlog = ({post}:BlogProps) => {
     return (
-        <>
-        <div className="w-screen lg:w-full p-6 mb-4 border border-gray-200 rounded-lg shadow dark:border-gray-700">
+        <div className="my-4 w-full h-80 flex flex-col justify-start items-baseline p-6 border border-gray-200 rounded-lg shadow dark:border-gray-700">
             <h5 className="mb-2 text-2xl font-bold tracking-tight">{post.title}</h5>
             <div>{post.date}</div>
             <div className="mb-3 font-normal">{post.description}</div>
@@ -22,7 +21,6 @@ const EachBlog = ({post}:BlogProps) => {
                 Read more
             </Link>
         </div>
-        </>
     )
 }
 
