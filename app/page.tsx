@@ -3,11 +3,11 @@ import Me from "./componets/Me";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center mt-10">
         <div className=" lg:w-full">
-          <p className="mb-6 text-3xl font-semibold leading-normal text-white">
+          <h1 className="mb-6 text-3xl font-semibold leading-normal text-white">
           Hello everyone, Welcome to my website i like to build a new stuf and learn new thing
-          </p>
+          </h1>
           <Link href="/about" className="text-white font-medium text-smpy-2.5">know more about me</Link>
         </div>
         <div className="lg:w-full">

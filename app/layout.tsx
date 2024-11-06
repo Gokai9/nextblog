@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} w-full lg:w-[1025px]`}>
         <Nav />
-        <main className="mt-10 max-w-screen flex flex-wrap items-center justify-between mx-auto py-4 mx-4">
+        <main className="mt-10 max-w-screen flex flex-wrap items-center justify-between mx-auto">
         {children}
         </main>
         <Footer />
