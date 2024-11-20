@@ -6,11 +6,13 @@ export const metadata = meta("About", "Do you want to know about me")
 export default function About() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center ">
+                <div className="lg:w-1/2 lg:relative block px-4 py-10 right-72">
                 <h2 className="text-xl bold">Hey there!</h2>
                 <p>Hello, you can call me sim. Im a software engineer, polyglot, and writer.
                     After learn english and japanese, i try to learn french and add it to my polyglot
                     stack. Also i am something writing about my learning journey.
                 </p>
+                </div>
                 <Me />
         </main>
         

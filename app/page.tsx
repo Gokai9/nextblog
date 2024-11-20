@@ -4,6 +4,7 @@ import Me from "./componets/Me";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center mt-10">
+      <section className="px-4">
         <div className=" lg:w-full">
           <h1 className="mb-6 text-3xl font-semibold leading-normal text-white">
           Hello everyone, Welcome to my website i like to build a new stuf and learn new thing
@@ -17,6 +18,7 @@ export default function Home() {
           </p>
           <Link href="/blog" className="text-white font-medium text-sm px-5 py-2.5 border hover:bg-gray-700">Read my blog</Link>
         </div>
+        </section>
         <Me />
     </main>
   );
