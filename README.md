@@ -43,7 +43,7 @@ improve bit by bit and try to add no feature.
 
 ### Continued development
 
-- Add SEO
+- Add SEO friendly
 - Search post by title
 - Filter by tag
 - Implement comment
