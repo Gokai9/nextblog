@@ -38,7 +38,8 @@ This is my blog where i post my writing there alongside to become my portfolio
 
 ### What I learned
 
-Add markdown to next js and mobile responsive 
+There are a lot of thing that i can learn from making this site like adding a markdown to next js or be more mobile responsive. This site is far from perfect but i will try to
+improve bit by bit and try to add no feature.
 
 ### Continued development
 
