@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Me = () => {
     return (
-        <div className="bg-gray-600 m-8 p-8 rounded w-full flex lg:flex-row flex-col justify-around">
+        <div className="bg-gray-600 mb-4 mx-2 p-6 rounded-lg shadow-lg flex lg:flex-row flex-col justify-around">
             <div className="lg:w-2/4 pb-4">
             <h1 className="text-xl">About ME</h1>
             <h3>I'm a Fullstack Developer, polyglot, and Writer.</h3>

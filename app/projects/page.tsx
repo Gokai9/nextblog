@@ -5,16 +5,19 @@ import meta from "../componets/helper/metadata"
 
 export default function Projects() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center">
-            <div>
-            {projectsData.map((project:ProjectType) => {
+        <section className="py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold text-blue-400 mb-8">My Portfolio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {projectsData.map((project:ProjectType) => {
                     return (
                         <Project key={project.id} project={project}/>
                     )
                 })}
-            </div>
-        </main>
-        
+          </div>
+        </div>
+      </section>
+
     )
 }
 
