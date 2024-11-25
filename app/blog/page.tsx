@@ -11,7 +11,7 @@ type MyComponentProps = {
 
 export const metadata = meta("Blogs", "Programming Blogs")
 
-const Layout:React.FC<MyComponentProps> = async({ children }) => {
+export default async function Layout ({ children }: MyComponentProps) {
   const posts = await getPosts();
   return (
     // Do what you need to do
@@ -22,5 +22,3 @@ const Layout:React.FC<MyComponentProps> = async({ children }) => {
     </>
   )
 }
-
-export default Layout

@@ -5,6 +5,7 @@ import Header from "./componets/Header";
 import Footer from "./componets/Footer";
 import meta from "./componets/helper/metadata";
 import Nav from "./componets/Nav";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = meta("Sim", "Blog tentang dunia programming")
@@ -27,6 +28,7 @@ export default function RootLayout({
         {children}
         </main>
         <Footer />
+        <Analytics />
         </body>
     </html>
   );
