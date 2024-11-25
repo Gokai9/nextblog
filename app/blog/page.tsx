@@ -5,12 +5,12 @@ import meta from "../componets/helper/metadata";
 import { getPosts } from "@/data/posts";
 import { ReactNode } from 'react';
 
-export type MyComponentProps = {
+type MyComponentProps = {
   children: ReactNode;
 };
 export const metadata = meta("Blogs", "Programming Blogs")
 
-export default async function Layout ({ children }: MyComponentProps) {
+const Layout = async({ children }: MyComponentProps) => {
   const posts = await getPosts();
   return (
     // Do what you need to do
