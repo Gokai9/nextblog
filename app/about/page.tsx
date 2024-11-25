@@ -7,7 +7,7 @@ export const metadata = meta("About", "Do you want to know about me")
 export default function About() {
     return (
       <div className="min-h-screen bg-black text-white">
-        <main className="container mx-auto px-6 py-12">
+        <main className="container mx-auto px-6 py-10">
           <h1 className="text-4xl font-semibold text-center text-blue-400 mb-8">About Me</h1>
           
           <section className="bg-gray-800 p-6 rounded-lg shadow-lg">

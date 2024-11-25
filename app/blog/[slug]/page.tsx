@@ -27,7 +27,7 @@ export default async function Page({ params }: {
   if (!post) return notFound();
   return (
     <main className="flex flex-col justify-center items-center lg:h-fit my-4">
-    <article className="prose lg:prose-xl text-slate-50 max-w-screen-lg flex flex-col">
+    <article className="prose lg:prose-xl text-slate-50 max-w-screen-lg flex flex-col mb-10">
       <div><Link style={{ textDecoration: 'none' }} href={"/"}>Home</Link> {">"} <Link style={{ textDecoration: 'none' }} href={"/blog"}>Blog</Link></div>
       <h1 className="text-slate-50">{post.title}</h1>
       <div>{post.date}</div>

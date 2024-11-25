@@ -8,8 +8,11 @@ export type Post = {
   date: string;
   description: string;
   body: string;
+  category: string[];
 };
-
+export type Posts = {
+  posts: Post
+}
 export async function getPosts() {
   const posts = await fs.readdir("./data/mdxblog/");
 

@@ -1,26 +1,19 @@
-import { getPosts } from "@/data/posts";
-import EachBlog from "../componets/EachBlog"
+// layout.tsx - Stays as Server Component
+
+import Blog from "@/app/blog/blog"
 import meta from "../componets/helper/metadata";
+import { getPosts } from "@/data/posts";
 
 export const metadata = meta("Blogs", "Programming Blogs")
 
-export default async function Page() {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const posts = await getPosts();
   return (
-    <div className="min-h-screen">
-    <header className="text-white py-6 text-center">
-        <h1 className="text-4xl font-bold">My Blog</h1>
-        <p className="text-lg mt-2">Sharing my thoughts, tutorials, and projects</p>
-      </header>
-
-    <div className=" grid grid-cols-1 gap-y-2 lg:grid-cols-2 lg:gap-4 py-6 m-2">
-      {posts
-        .sort((a, b) =>
-          new Date(b.date).getTime() - new Date(a.date).getTime())
-        .map((post) => (
-            <EachBlog key={post.slug} post={post}/>
-        ))}
-    </div>
-    </div>
-  );
+    // Do what you need to do
+    <>
+      <Blog posts={posts}>
+        {children}
+      </Blog>
+    </>
+  )
 }
