@@ -3,10 +3,15 @@
 import Blog from "@/app/blog/blog"
 import meta from "../componets/helper/metadata";
 import { getPosts } from "@/data/posts";
+import { ReactNode } from 'react';
+
+type MyComponentProps = {
+  children: ReactNode;
+};
 
 export const metadata = meta("Blogs", "Programming Blogs")
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
+const Layout:React.FC<MyComponentProps> = async({ children }) => {
   const posts = await getPosts();
   return (
     // Do what you need to do
@@ -17,3 +22,5 @@ export default async function Layout({ children }: { children: React.ReactNode }
     </>
   )
 }
+
+export default Layout
