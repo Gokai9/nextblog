@@ -5,7 +5,7 @@ import meta from "../componets/helper/metadata";
 import { getPosts } from "@/data/posts";
 import { ReactNode } from 'react';
 
-type MyComponentProps = {
+export type MyComponentProps = {
   children: ReactNode;
 };
 export const metadata = meta("Blogs", "Programming Blogs")
