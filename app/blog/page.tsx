@@ -10,7 +10,7 @@ type MyComponentProps = {
 };
 export const metadata = meta("Blogs", "Programming Blogs")
 
-const Layout = async({ children }: MyComponentProps) => {
+const Blogs = async({ children }: MyComponentProps) => {
   const posts = await getPosts();
   return (
     // Do what you need to do
@@ -21,3 +21,4 @@ const Layout = async({ children }: MyComponentProps) => {
     </>
   )
 }
+ export default Blogs
