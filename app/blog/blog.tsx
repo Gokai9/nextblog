@@ -1,15 +1,13 @@
 "use client"
-import { getPosts, Post, Posts } from "@/data/posts";
+import { Post} from "@/data/posts";
 import EachBlog from "../componets/EachBlog"
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Blog({
  posts
 }: {
  posts: Post[]
 }) {
-  
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
