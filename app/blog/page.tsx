@@ -10,14 +10,12 @@ export type MyComponentProps = {
 };
 export const metadata = meta("Blogs", "Programming Blogs")
 
-const Blogs = async({ children }: MyComponentProps) => {
+const Blogs = async({ children }: {children: ReactNode}) => {
   const posts = await getPosts();
   return (
     // Do what you need to do
     <>
-      <Blog posts={posts}>
-        {children}
-      </Blog>
+      <Blog posts={posts}/>
     </>
   )
 }

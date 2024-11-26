@@ -5,9 +5,9 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function Blog({
-  children, posts
+ posts
 }: {
-  children: React.ReactNode, posts: Post[]
+ posts: Post[]
 }) {
   
   const [searchQuery, setSearchQuery] = useState("");
@@ -87,7 +87,7 @@ export default function Blog({
         </button>
       </div>
     </div>
-    {children}
+   
     </>
   );
 }
