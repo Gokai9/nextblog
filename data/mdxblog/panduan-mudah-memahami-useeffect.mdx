@@ -1,0 +1,76 @@
+---
+title: "Panduan Mudah Memahami useEffect di React: Cara Kerja dan Contoh Penggunaannya"
+description: Pelajari cara kerja useEffect di React untuk menangani efek samping dengan mudah dan efektif dalam komponen fungsional.
+slug: panduan-mudah-memahami-useeffect
+date: Nov 29, 2024
+category: [programming, react]
+---
+
+`useEffect` adalah salah satu fitur dari React yang digunakan untuk menangani **efek samping** (side effects) di dalam komponen fungsional. Efek samping ini bisa berupa hal-hal yang terjadi setelah render, seperti mengambil data dari server, mengatur timer, atau memperbarui dokumen. Sebelumnya, efek samping ini harus ditangani menggunakan lifecycle methods di komponen berbasis kelas, tapi dengan `useEffect`, semua ini bisa dilakukan dengan cara yang lebih sederhana di komponen fungsional.
+
+### Apa itu Efek Samping?
+
+Efek samping adalah segala sesuatu yang terjadi **di luar** rendering biasa komponen React, seperti:
+- Mengambil data dari API
+- Mengatur interval atau timeout
+- Menambahkan event listener
+- Mengupdate DOM secara langsung
+
+### Bagaimana Cara Kerja `useEffect`?
+
+`useEffect` berfungsi seperti "pemberitahuan" yang memberi tahu React, "Setelah komponen selesai dirender, jalankan efek ini". Efek ini bisa dijalankan **setelah render** (render pertama kali atau ketika ada perubahan state/props).
+
+`useEffect` memiliki dua argumen:
+1. **Fungsi efek**: Ini adalah kode yang akan dijalankan setelah render.
+2. **Array dependensi** (opsional): Ini berisi variabel-variabel yang jika berubah, maka efek tersebut akan dijalankan ulang.
+
+### Contoh Penggunaan `useEffect`
+
+1. **Menjalankan Efek Setelah Render**
+
+Jika Anda ingin menjalankan sesuatu setelah komponen dirender, cukup berikan fungsi efek tanpa array dependensi. Efek ini akan dijalankan setiap kali komponen dirender ulang.
+
+```js
+useEffect(() => {
+  console.log("Komponen dirender");
+});
+```
+
+2. **Menjalankan Efek Hanya Sekali (Mirip `componentDidMount`)**
+
+Jika Anda ingin efek hanya dijalankan sekali saat komponen pertama kali dimuat (misalnya untuk mengambil data), gunakan array kosong `[]` sebagai dependensi.
+
+```js
+useEffect(() => {
+  console.log("Komponen pertama kali dimuat");
+}, []);
+```
+
+3. **Menjalankan Efek Ketika Variabel Tertentu Berubah**
+
+Jika Anda ingin efek dijalankan hanya ketika nilai tertentu berubah (misalnya ketika data atau input berubah), Anda bisa menambahkan variabel tersebut ke dalam array dependensi.
+
+```js
+useEffect(() => {
+  console.log("Data berubah:", data);
+}, [data]);  // Efek akan dijalankan saat 'data' berubah
+```
+
+4. **Membersihkan Efek (Cleanup)**
+
+Terkadang, efek samping seperti timer atau event listener perlu dibersihkan saat komponen tidak lagi digunakan. Anda bisa melakukannya dengan mengembalikan fungsi pembersihan dalam `useEffect`.
+
+```js
+useEffect(() => {
+  const timer = setTimeout(() => {
+    console.log("Waktu habis");
+  }, 1000);
+
+  // Pembersihan timer saat komponen dihapus
+  return () => clearTimeout(timer);
+}, []);  // Efek ini hanya dijalankan sekali, saat komponen dimuat
+```
+
+### Kesimpulan
+
+`useEffect` memberi kita kontrol penuh untuk menjalankan efek samping di komponen fungsional React. Dengan memanfaatkan dependensi, kita bisa menentukan kapan efek dijalankan—apakah setelah render pertama, saat ada perubahan tertentu, atau ketika komponen dihapus. Ini membuat `useEffect` menjadi alat yang sangat fleksibel dan powerful untuk mengelola logika asinkron dan pembersihan di aplikasi React.

@@ -22,7 +22,8 @@ export default function Blog({
   
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
-  const paginatedPosts = filteredPosts.slice(
+  const paginatedPosts = filteredPosts.sort((a, b) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime()).slice(
     (currentPage - 1) * postsPerPage,
     currentPage * postsPerPage
   );
@@ -39,7 +40,7 @@ export default function Blog({
           placeholder="Search posts..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md"
+          className="w-full p-2 border border-gray-300 rounded-md text-black"
         />
       </div>
 
@@ -67,8 +68,8 @@ export default function Blog({
       {/* Pagination */}
       <div className="flex justify-between mt-8">
         <button
-          onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
+          disabled={currentPage === 1 || currentPage === 0}
           className="bg-blue-500 text-white p-2 rounded-md disabled:opacity-50"
         >
           Previous

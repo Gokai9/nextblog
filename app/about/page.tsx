@@ -17,8 +17,11 @@ export default function About() {
               Over the years, I've gained experience in Programming.
             </p>
             <p className="mt-4 text-lg">
-              When I'm free, I enjoy Learn language and read a book. This website serves as a place to share my journey, 
-              thoughts, and projects with others.
+            I am a multilingual individual who can speak Javanese, Indonesian, English, and Japanese. 
+            Currently, I am learning French, German, and Russian. 
+            I have a passion for reading books and writing, which fuels my creativity and curiosity. 
+            In terms of programming, I am proficient in Python, JavaScript, and Go, and I also have experience working with React, HTML, and CSS. 
+            My primary interests lie in the fields of machine learning and artificial intelligence, where I aim to explore and contribute to innovations in these areas.
             </p>
           </section>
   
